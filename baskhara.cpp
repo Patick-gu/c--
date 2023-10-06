@@ -1,27 +1,27 @@
 #include <iostream> 
 #include <math.h>
+#include <iomanip>
 using namespace std;
 
 int main(){
-    double A;
-    double B;
-    double C;
+    double A,B,C;
     cin>>A>>B>>C;
-    double regra1= B*B;
-    double regra2= A*C;
-    double regra3= regra2 * 4;
-    double delta=  regra1-regra3;
+    double delta= (B*B)-(4*(A*C));
     double raiz = sqrt(delta);
     double div=  2*A;
-    double tratamento = -(B);
-    double div1=  raiz/div;
-    double resultado1 = tratamento-div1;
-    double resultado2 = tratamento+div1;
-    cout<<"delta igual a = "<<delta<<endl;
-    cout<<"raiz= "<<raiz<<endl;
-    cout<<"div= "<<div<<endl;
-    cout<<"tratamento= "<<tratamento<<endl;
-    cout<<"div1= "<<div1<<endl;
-    cout<<"R2= "<<resultado1<<endl;
-    cout<<"R2= "<<resultado2<<endl;
+    
+    
+    if(delta<0){
+         cout << "impossível calcular " << endl;
+    }
+    else if(A==0){
+         cout << "impossível calcular " << endl;
+    }
+    else{
+        double BHASKARA2=(-(B)-raiz)/div; 
+        double BHASKARA1=(-(B)+raiz)/div; 
+        cout<<fixed<<setprecision(5)<<endl;
+        cout<<"R1= "<<BHASKARA1<<endl;
+        cout<<"R2= "<<BHASKARA2<<endl;
+    }
 }
