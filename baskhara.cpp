@@ -25,3 +25,5 @@ int main(){
         cout<<"R2= "<<BHASKARA2<<endl;
     }
 }
+
+//oi
